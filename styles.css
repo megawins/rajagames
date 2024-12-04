@@ -12,6 +12,26 @@ body {
 }
 
 
+.about  h2{
+    font-size: 40px;
+    line-height: 45px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.joinbutton{
+    background: linear-gradient(45deg, rgb(0, 155, 216), rgb(98, 192, 255));
+    border-radius: 10px;
+    padding: 14px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    right: 375px;
+    top: -450px;
+
+}
+
+
 .social-icons a {
     margin-right: 8px;
 }
@@ -40,6 +60,26 @@ body {
     color: #fff;
 }
 
+
+
+.uls{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.uls li {
+    border-bottom:1px solid #d9d9d9;
+    padding: 25px 0px;
+    width: 442px;
+    text-align: left;
+}
+
+li p{
+
+    width: 280px;
+}
+
 .header.transparent {
     background: transparent; /* Keep transparent when at the top */
     box-shadow: none;
@@ -48,6 +88,7 @@ body {
 .header.scrolled {
     background: rgba(18, 18, 18, 1); /* Slightly opaque when scrolled */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    z-index: 999999;
 }
 
 .nav {
@@ -109,7 +150,7 @@ body {
 .about,
 .statistics {
     text-align: center;
-    padding: 50px 20px;
+    padding: 50px 50px;
     background: white;
     color: black;
     border-radius: 25px;
@@ -130,4 +171,66 @@ footer {
     background: #141415;
     color: #fff;
     width: 100%;
+}
+
+
+
+
+
+.paginate {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    left: 310px;
+    top: -167px;
+}
+
+.carousel {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        width: 70%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+    width: 100%;
+    height: auto;
+    flex: 0 0 100%; /* Each image takes full width */
+    border-radius: 28px;
+    
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 185px;
+}
+
+.carousel-button:focus {
+    outline: none;
 }
