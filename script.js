@@ -61,3 +61,35 @@ if (window.scrollY === 0) {
         }
         updateCarousel();
     });
+
+
+
+
+    function openPopup(popupId) {
+        document.getElementById(popupId).style.display = 'flex';
+    }
+    
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+    }
+    
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+            item.classList.toggle("active");
+
+            // Close other open FAQs
+            faqItems.forEach((otherItem) => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove("active");
+                }
+            });
+        });
+    });
+});
