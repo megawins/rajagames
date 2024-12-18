@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #141415;
@@ -37,14 +41,15 @@ body {
     margin-right: 8px;
 }
 .body-back{
-    background-image: url(bq.png);
+    background-image: url(bq3.png);
     background-repeat: no-repeat;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-position-x: 16%;
-    background-position-y: -3%;
+    background-position-x: 117%;
+    background-position-y: -2%;
+    background-size: 122%;
 }
 .header {
     display: flex;
@@ -162,7 +167,7 @@ li p{
 
 .statistics1 {
     text-align: center;
-    padding: 50px 50px;
+    padding: 20px 50px;
 
     color: rgb(255, 255, 255);
     border-radius: 25px;
@@ -174,15 +179,17 @@ li p{
 
 .statistics2 {
     text-align: center;
-    padding: 50px;
+    padding: 30px 20px;
     color: #fff;
     border-radius: 25px;
     margin-bottom: 20px;
     height: auto;
-    width: 95%;
+    width: 89%;
     z-index: 9999;
-    margin-top: 100px;
+    margin-top: 35px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: #1e1d1d;
+
 }
 
 .chart-container {
@@ -318,8 +325,14 @@ footer {
     max-width: 600px;
     margin: 0 auto;
     overflow: hidden;
-    left: 310px;
+    left: 299px;
     top: -167px;
+}
+
+
+
+.statistics3{
+    margin-bottom: -37px;
 }
 
 .carousel {
@@ -435,7 +448,7 @@ footer {
 
 .affiliate-card {
     background: white;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 20px;
     color: #fff;
     cursor: pointer;
@@ -525,11 +538,10 @@ footer {
 .statistics4 {
     text-align: center;
     padding: 50px;
-    background: #141415;
+    background: #1c1c1c;
     color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 48%);
     width: 85%;
     margin-bottom: 35px;
 }
@@ -626,8 +638,52 @@ footer {
 
 
 
+.wheel{
+        background: linear-gradient(45deg, #ff6900, #ff0000);
+        width: 89%;
+        border-radius: 25px;
+        height: 440px;
+        margin-top: 55px;
+        align-content: center;
+
+}
 
 
+
+.weel img{
+    width: 380px;
+}
+
+.wheel-cont{
+    display: flex;
+    justify-content: center;
+}
+
+.weel-para{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+table{
+    background: white;
+    color: black;
+    border-radius: 15px;
+    width: 50%;
+    padding: 20px;
+    font-size: 12px;
+
+}
+td{
+    text-align: center;
+    background: #f7f7f7;
+}
+
+th{
+    color: #0087ff;
+}
 
 
 /* Statistics5 - Contact Us Section */
@@ -636,7 +692,7 @@ footer {
     padding: 50px 20px;
     background: #1c1f26; /* Dark background for contrast */
     color: #fff;
-    border-radius: 15px;
+    border-radius: 25px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     margin: 20px auto;
     width: 90%;
@@ -697,10 +753,10 @@ footer {
 /* Statistics6 - Join Us Section */
 .statistics6 {
     text-align: center;
-    padding: 60px 20px;
-    background: radial-gradient(circle, #310000, #000000); /* Dark background for modern look */
+    padding:30px 20px;
+    background: white;
     color: #fff;
-    border-radius: 15px;
+    border-radius: 25px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     margin: 30px auto;
     width: 90%;
@@ -713,8 +769,8 @@ footer {
 
 .statistics6 h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffffff; /* Highlighted title color */
+    margin-bottom: -5px;
+    color: #000000; /* Highlighted title color */
     font-weight: bold;
 }
 
@@ -772,6 +828,65 @@ footer {
         height: 20px;
     }
 }
+
+
+
+
+
+
+
+
+
+.user-statistics {
+    background: #ff0000; /* Red background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 25px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 1126px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.user-statistics h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.user-statistics p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    margin: 15px;
+    min-width: 150px;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-item p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
 
 
 
@@ -861,8 +976,81 @@ footer {
 
 
 
+.menu a {
+    color: #979191;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu a.active {
+    color: #ffffff; /* Highlighted text color */
+    filter:drop-shadow(0px 0px 10px rgb(251, 255, 0));   
+
+    border-radius: 5px;
+}
 
 
+
+
+
+
+
+
+
+
+/* Scrolling Gallery Container */
+.scrolling-gallery {
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+    margin: 0 auto;
+    background: #fbfbfb;
+    padding: 20px 0;
+    border-radius: 25px;
+}
+
+.gallery-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+}
+
+.image-card {
+    flex: 0 0 auto;
+    margin: 0 10px; /* Space between images */
+    width: 220px; /* Set image card width */
+    height: 300px; /* Set image card height */
+    transform: rotate(-5deg); /* Default tilt */
+    transition: transform 0.5s ease;
+}
+
+.image-card:nth-child(even) {
+    transform: rotate(5deg); /* Opposite rotation for even tiles */
+}
+
+.image-card:hover {
+    transform: scale(1.05) rotate(0deg); /* Hover effect: reset rotation and scale up */
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll Animation */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Move half of the duplicated content */
+    }
+}
 
 
 
