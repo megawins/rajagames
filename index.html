@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
     <div class="body-back">
     <header class="header">
 
@@ -20,11 +21,12 @@
             </div>
             <div class="menu">
                 <a href="#about">About Us</a>
-                <a href="#statistics">All Games</a>
-                <a href="#token">Affiliate Program</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact Us</a>
-                <a href="#career">Career</a>
+                <a href="#statistics1">All Games</a>
+                <a href="#statistics2">Popularity</a>
+                <a href="#statistics3">Affiliate Program</a>
+                <a href="#statistics4">FAQ</a>
+                <a href="#statistics5">Contact Us</a>
+                <a href="#statistics6">Career</a>
                 <a href="#blogs">Blogs</a>
             </div>
 
@@ -36,7 +38,7 @@
 
     </header>
 
-    <section class="hero">
+    <section class="hero" id="about">
         <div>
             <img src="back phone.png" width="620px" style="    right: 56px;
             position: relative;
@@ -51,6 +53,9 @@
          
         </div>
     </section>
+
+
+
 
     <section class="about" id="about">
         <h2><span style="    color: #000000;
@@ -107,6 +112,27 @@
         <a class="joinbutton" href="https://t.me/RajaGamesChannel"> JOIN </a>
         
     </section>
+
+
+    <section class="user-statistics" id="about">
+        <h2>User Statistics</h2>
+        <p>Step into a world of endless possibilities with Raja Wager, where every game is a new adventure waiting to be explored.</p>
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3><span id="downloads">0</span>K</h3>
+                <p>Total Downloads</p>
+            </div>
+            <div class="stat-item">
+                <h3><span id="happy-users">0</span>K</h3>
+                <p>Happy Users</p>
+            </div>
+            <div class="stat-item">
+                <h3><span id="active-users">0</span>K</h3>
+                <p>Active Users</p>
+            </div>
+        </div>
+    </section>
+    
 
     <section class="statistics1" id="statistics1">
 
@@ -187,13 +213,86 @@
            
         </div>
     </section>
+
+    <section class="wheel" id="statistics1">
+        <div class="wheel-cont">
+            <div class="weel">
+                <img src="weel.png" alt="">
+            </div>
+            <div class="weel-para">
+                <h2 style="    margin-bottom: -2px;
+">Know about Our Spin & Win</h2>
+                <p>Now Depositing money for playing and earning brings you more!  Get more lucky draw points on your every deposit, </p>
+                <br>
+                <div style="     display: flex
+                ;
+                    align-items: center;
+                    width: 95%;
+                    gap: 20px;
+                    justify-content: center;">
+                <table>
+                    <tr>
+                      <th>Deposit</th>
+                      <th>Lucky Draw Point</th>
+                    </tr>
+                    <tr>
+                      <td>₹500</td>
+                      <td>+1 Point (1 Spin)</td>
+
+                    </tr>
+                    <tr>
+                        <td>₹1,000</td>
+                        <td>+1 Point (1 Spin)</td>
+
+                    </tr>
+                    <tr>
+                        <td>₹2,000</td>
+                        <td>+1 Point (1 Spin)</td>
+  
+                      </tr>
+                      <tr>
+                        <td>₹5,000</td>
+                      <td>+2 Point (2 Spins)</td>
+  
+                      </tr>
+                      <tr>
+                        <td>₹10,000</td>
+                      <td>+3 Point (3 Spins)</td>
+  
+                      </tr>
+                      <tr>
+                        <td>₹50,000</td>
+                        <td>+4 Point (4 Spins)</td>
+  
+                      </tr>
+                      <tr>
+                        <td>₹1,00,000</td>
+                        <td>+5 Point (5 Spins)</td>
+  
+                      </tr>
+                  </table>
+                <button type="button"   style="     border: none;
+                border-radius: 15px;
+                padding: 25px 35px;
+                background: linear-gradient(45deg, #4bff00, #ffef00);
+                color: #000000;
+                font-weight: 900;
+                font-size: 20px;"> ENTER</button>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
     <section class="statistics2" id="statistics2">
-        <h2>The Company's Popularity Over the Past <span style="background: linear-gradient(45deg, rgb(2, 108, 122) , rgb(255, 0, 0)); border-radius: 50px; padding: 15px; width: 500px;" >11 Years</span></h2>
+        <h2>The Company's Popularity Over the Past <span style="background:red; border-radius: 50px; padding: 15px; width: 500px;" >11 Years</span></h2>
         <div class="chart-container">
             <canvas id="growthChart">d</canvas>
         </div>
+        <p style="color: grey; text-align: left; margin-left: 228px; margin-top: 25px;">This report is based on Google Trends</p>
     </section>
     
+
     <section class="statistics3" id="statistics3">
         <h2>Affiliate Programs</h2>
         <div class="affiliate-grid">
@@ -262,6 +361,7 @@
         </div>
     </section>
     
+
     <section class="statistics4" id="statistics4">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
@@ -315,6 +415,7 @@
         </div>
     </section>
     
+
     <section class="statistics5" id="statistics5">
         <h2>Contact Us</h2>
         <div class="contact-container">
@@ -335,6 +436,7 @@
         </div>
     </section>
     
+
     <section class="statistics6" id="statistics6">
         <h2>Become a RAJA GAMES Employee!</h2>
         <div class="join-us-container">
@@ -345,8 +447,27 @@
                 Send Your CV to <span>careers@rajagames.com</span>
             </a>
         </div>
-    </section>
 
+        <div class="scrolling-gallery">
+            <div class="gallery-track">
+                <div class="image-card"><img src="corp1.png" alt="Corporate 1"></div>
+                <div class="image-card"><img src="corp2.png" alt="Corporate 2"></div>
+                <div class="image-card"><img src="corp3.png" alt="Corporate 3"></div>
+                <div class="image-card"><img src="corp4.jpg" alt="Corporate 4"></div>
+                <div class="image-card"><img src="corp5.jpg" alt="Corporate 5"></div>
+                <div class="image-card"><img src="corp6.jpg" alt="Corporate 6"></div>
+                <div class="image-card"><img src="corp7.jpg" alt="Corporate 7"></div>
+                <!-- Duplicate Images for Smooth Loop -->
+                <div class="image-card"><img src="corp1.png" alt="Corporate 1"></div>
+                <div class="image-card"><img src="corp2.png" alt="Corporate 2"></div>
+                <div class="image-card"><img src="corp3.png" alt="Corporate 3"></div>
+                <div class="image-card"><img src="corp4.jpg" alt="Corporate 4"></div>
+                <div class="image-card"><img src="corp5.jpg" alt="Corporate 5"></div>
+                <div class="image-card"><img src="corp6.jpg" alt="Corporate 6"></div>
+                <div class="image-card"><img src="corp7.jpg" alt="Corporate 7"></div>
+            </div>
+        </div>
+    </section>
 
 
     <section class="blogs-section" id="blogs">
@@ -419,7 +540,7 @@
                     <a href="https://t.me/RajaGamesChannel" target="_blank"><img src="tg.png" alt="Telegram"></a>
                     <a href="https://x.com/rajagames_" target="_blank"><img src="x.png" alt="X"></a>
                     <a href="https://www.linkedin.com/company/raja-game/" target="_blank"><img src="linkedin.png" alt="Linkedin"></a>
-                    <a href="https://www.instagram.com/rajagames.india/" target="_blank"><img src="insta.png" alt="Instagram"></a>
+                    <a href="https://www.instagram.com/rajagames.co/" target="_blank"><img src="insta.png" alt="Instagram"></a>
                     <a href="https://www.facebook.com/profile.php?id=61569778589579" target="_blank"><img src="facebook.png" alt="Facebook"></a>
                     <a href="https://whatsapp.com/channel/0029VawYzzy23n3leWsoJq1x" target="_blank"><img src="whats.png" alt="WhatsApp"></a>
                 </div>
@@ -428,7 +549,7 @@
             <!-- Contact Information -->
             <div class="footer-contact">
                 <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:support@rajagames.com">support@rajagames.com</a></p>
+                <p>Email: <a href="mailto:ask.rajagames@gmail.com">ask.rajagames@gmail.com</a></p>
                 <p>Telegram: <a href="https://t.me/RajaGamesChannel" target="_blank">Join Our Telegram</a></p>
             </div>
         </div>
