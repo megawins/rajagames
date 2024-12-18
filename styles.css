@@ -698,7 +698,7 @@ footer {
 .statistics6 {
     text-align: center;
     padding: 60px 20px;
-    background: radial-gradient(circle, #265e7b, #000000); /* Dark background for modern look */
+    background: radial-gradient(circle, #6b0000, #000000) /* Dark background for modern look */
     color: #fff;
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
