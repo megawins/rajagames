@@ -93,3 +93,117 @@ if (window.scrollY === 0) {
         });
     });
 });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const marqueeContainers = document.querySelectorAll(".marquee-container");
+
+    marqueeContainers.forEach((container) => {
+        const row = container.querySelector(".marquee-row");
+
+        // Clone content to ensure seamless animation
+        const clone = row.cloneNode(true);
+        container.appendChild(clone);
+
+        // Set animation direction based on the data attribute
+        const direction = container.dataset.direction;
+
+        if (direction === "right") {
+            row.style.animation = "scrollRight 10s linear infinite";
+        } else {
+            row.style.animation = "scrollLeft 10s linear infinite";
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to count up numbers
+    function countUp(element, target, duration) {
+        let start = 0;
+        const increment = Math.ceil(target / (duration / 16));
+        
+        function updateNumber() {
+            start += increment;
+            if (start >= target) {
+                start = target;
+                clearInterval(timer);
+            }
+            element.textContent = start.toLocaleString();
+        }
+
+        const timer = setInterval(updateNumber, 16);
+    }
+
+    // Elements and their target numbers
+    countUp(document.getElementById('downloads'), 900, 2000);
+    countUp(document.getElementById('happy-users'), 750, 2000);
+    countUp(document.getElementById('active-users'), 490, 2000);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".menu a");
+
+    const options = {
+        threshold: 0.6, // Trigger when 60% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Remove active class from all links
+                navLinks.forEach((link) => link.classList.remove("active"));
+
+                // Add active class to the corresponding link
+                const id = entry.target.getAttribute("id");
+                const activeLink = document.querySelector(`.menu a[href="#${id}"]`);
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
+            }
+        });
+    }, options);
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.gallery-track');
+    const images = Array.from(track.children);
+
+    // Duplicate gallery content
+    images.forEach((image) => {
+        const clone = image.cloneNode(true);
+        track.appendChild(clone);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.gallery-track');
+    let speed = 15; // Default speed in seconds
+
+    // Function to update animation speed
+    function updateSpeed(newSpeed) {
+        track.style.animationDuration = `${newSpeed}s`;
+    }
+
+    // Example: Set speed dynamically
+    updateSpeed(45); // Set speed to 20 seconds
+});
+
+
+
+
+
+
