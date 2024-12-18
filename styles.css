@@ -436,6 +436,65 @@ footer {
 
 
 
+
+.game-tile {
+    animation: breathe 3s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1); /* Default size */
+    }
+    50% {
+        transform: scale(1.05); /* Slightly larger */
+    }
+}
+
+/* Add delay for each tile */
+.game-tile:nth-child(1) {
+    animation-delay: 0s; /* No delay for the first tile */
+}
+.game-tile:nth-child(2) {
+    animation-delay: 0.2s; /* Delay for the second tile */
+}
+.game-tile:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.game-tile:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.game-tile:nth-child(5) {
+    animation-delay: 0.8s;
+}
+.game-tile:nth-child(6) {
+    animation-delay: 1s;
+}
+.game-tile:nth-child(7) {
+    animation-delay: 1.2s;
+}
+.game-tile:nth-child(8) {
+    animation-delay: 1.4s;
+}
+.game-tile:nth-child(9) {
+    animation-delay: 1.6s;
+}
+.game-tile:nth-child(10) {
+    animation-delay: 1.8s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Affiliate Section Grid */
 .affiliate-grid {
     display: grid;
@@ -639,7 +698,7 @@ footer {
 
 
 .wheel{
-        background: linear-gradient(45deg, #ff6900, #ff0000);
+        background: linear-gradient(45deg, #373535, #1a1a1a);
         width: 89%;
         border-radius: 25px;
         height: 440px;
@@ -665,6 +724,30 @@ footer {
     flex-direction: column;
     align-items: center;
 }
+
+
+
+.weel img {
+    animation: spin 5s linear infinite; /* 5s duration, linear speed, infinite loop */
+    transition: transform 0.5s ease; /* Smooth transition on hover */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.weel img:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+}
+
+
+
+
 
 
 table{
