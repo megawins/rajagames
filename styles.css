@@ -356,47 +356,52 @@ footer {
     align-items: center;
     overflow: hidden;
     position: relative;
-    width: 70%;
+    width: 70%; /* Adjust the width as needed */
+    height: auto; /* Adjust height as needed */
+    border-radius: 28px; /* Rounded corners */
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    animation: slide 16s ease-in-out infinite; /* Infinite sliding animation with delays */
 }
 
 .carousel-track img {
     width: 100%;
     height: auto;
-    flex: 0 0 100%;
-    /* Each image takes full width */
+    flex: 0 0 100%; /* Each image takes full width */
     border-radius: 28px;
-
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 2;
-    padding: 10px;
-    border-radius: 50%;
-}
-
-.carousel-button.left {
-    left: 10px;
-}
-
-.carousel-button.right {
-    right: 185px;
-}
-
-.carousel-button:focus {
-    outline: none;
+/* Keyframes for controlled sliding */
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* Show first image */
+    }
+    20% {
+        transform: translateX(0); /* Pause on first image */
+    }
+    25% {
+        transform: translateX(-100%); /* Slide to second image */
+    }
+    45% {
+        transform: translateX(-100%); /* Pause on second image */
+    }
+    50% {
+        transform: translateX(-200%); /* Slide to third image */
+    }
+    70% {
+        transform: translateX(-200%); /* Pause on third image */
+    }
+    75% {
+        transform: translateX(-300%); /* Slide to fourth image */
+    }
+    95% {
+        transform: translateX(-300%); /* Pause on fourth image */
+    }
+    100% {
+        transform: translateX(0); /* Return to first image */
+    }
 }
 
 
@@ -912,7 +917,7 @@ th {
 .contact-item {
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #2b2f38, #1c1f26);
+    background: linear-gradient(135deg, #39718f, #152345);
     padding: 15px 25px;
     border-radius: 50px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
@@ -1281,10 +1286,11 @@ th {
     bottom: -120px;
 }
 
-.nameb {
+.nameb  a{
     color: #000000;
     font-size: 71px;
     font-weight: 900;
+    text-decoration: none;
 }
 
 .hero img {
@@ -1350,6 +1356,20 @@ th {
 }
 
 
+.social-icons{
+    position: relative;
+ 
+}
+
+.enter{
+    border: none;
+    border-radius: 15px;
+    padding: 25px 35px;
+    background: linear-gradient(45deg, #4bff00, #ffef00);
+    color: #004d5b;
+    font-weight: 900;
+    font-size: 20px;
+}
 
 
 /* General Responsive Adjustments */
@@ -1445,13 +1465,97 @@ th {
 }
 @media (max-width: 480px) {
 
+    .carousel-track img{
+        border-radius: 15px;
+
+    }
+
+    .footer-links h3, .footer-social h3, .footer-contact h3 {
+        font-size: 1.2rem;
+        margin-bottom: -10px;
+        color: #e91414;
+    }
+
+
+    .footer-social .social-icons img {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 25px;
+    }
+
+    .statistics5{
+        margin:5px 20px ;
+
+    }
+
+
+    .enter{
+        padding: 16px 35px;
+    }
+    .close{
+        top: 42%;
+        left: 91%;
+        font-size: 55px;
+    }
+    .popup-text h4{
+        font-size: 15px;
+    }
+
+    .popup-text p, .popup-text ul li {
+        font-size: 10px; 
+        margin: 0;
+    }
+    .popup-content{
+        width: 90%;
+        max-width: 90%;
+        padding: 15px;
+    }
+    .popup-content h3{
+        font-size: 20px;
+    }
+
+    .popup-text{
+        width: 95%;
+    }
+
+
+    .chart-container{
+        height: 213px;
+    }
+
+    .user-statistics h2  {
+        font-size: 35px;
+        margin-bottom: 0px;
+
+    }  
+    .user-statistics p  {
+        font-size: 15px;
+        line-height: 17px;
+    }   
+
+    .stat-item p{
+        margin-top: -20px;
+        margin-bottom: -10px;
+    }
+
+    .carousel{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+
+    .social-icons{
+        position: relative;
+        top: 30px;
+    }
+
     .blog-track{
         gap: 0px;
     }
 
 
     .blog-tile{
-        margin-left:40px;
+        margin-left:14px;
     }
     .blogs-section h2{
         font-size: 25px;
@@ -1471,9 +1575,11 @@ th {
         font-size: 10px;
         padding: 10px 15px;
         gap: 3px;
+        margin-top: 7px;
     }
     .statistics6{
         width: 90%;
+        margin: 17px auto;
     }
 
     .statistics6 h2{
@@ -1534,19 +1640,21 @@ th {
         border-radius: 15px;
         animation: breathe 4s ease-in-out infinite;
         transform-origin: center;
+        height: 195px;
        
     }
     .affiliate-card h3{
-        font-size: 20px;
+        font-size: 14px;
+        margin: 0px;
         
     }
     .affiliate-card p{
-        font-size: 12px;
+        font-size: 10px;
     }
     .hero-content h1 {
         font-size: 2.5em;
         /* Smaller heading for mobile */
-        line-height: 40px;
+        line-height: 33px;
         margin-bottom: 0px;
     }
 
@@ -1586,13 +1694,21 @@ th {
     .menu {
         text-align: center;
         line-height: 16px;
+        position: relative;
+        bottom: 33px;
     }
+    
 
+    .nav-button {
+        top: -11px;
+        position: relative;
+        width: 55%;
+    }
 
     .nav-button button {
         background: none;
         color: white;
-        font-size: 0.7rem;
+        font-size: 7px;
         padding: 6px 8px;
         border: 2px solid red;
         width: 40%;
@@ -1614,7 +1730,7 @@ th {
     }
 
     .social-icons a img {
-        width: 25px;
+        width: 20px;
 
     }
 
@@ -1640,6 +1756,7 @@ th {
     .hero-content {
         width: 50%;
         margin-bottom: 12%;
+        line-height: 18px;
     }
 
 
@@ -1658,25 +1775,28 @@ th {
     .about {
         width: 95%;
         padding: 5%;
+        height: 665px;
     }
 
     .about h2 {
         font-size: 25px;
-        line-height: 28px;
+        line-height: 30px;
         margin-bottom: 0px;
     }
 
-    .nameb {
-        color: #000000;
-        font-size: 85px;
+    .nameb a {
+        color: #b6b6b6;
+        font-size: 45px;
         font-weight: 900;
         line-height: 75%;
+        text-decoration: none;
     }
 
     .uls li {
-        font-size: x-small;
-        padding: 2%;
+        font-size: 12px;
         width: 100%;
+        padding: 8px;
+    
     }
 
     .uls {
@@ -1691,10 +1811,6 @@ th {
         width: auto;
     }
 
-
-    .carousel-button.right {
-        right: 114px;
-    }
 
     .imgicon1 {
         display: none;
@@ -1742,8 +1858,8 @@ th {
 
     .weel-para h2 {
         line-height: 35px;
-        font-size: 30px;
-        margin-bottom: 10px;
+        font-size: 23px;
+        margin-bottom: 0px;
     }
 
     .weel-para p {
@@ -1761,25 +1877,31 @@ th {
     }
 
     table {
-        width: 346px;
+        width: 317px;
         font-size: 10px;
     }
 
     .statistics2{
         margin-top: 15px;
+        margin-bottom: 10px;
     }
 
     .statistics2 h2 {
-        font-size: 25px
+        font-size: 24px
     }
 
     .statistics2 p {
         color: grey;
         text-align: left;
         margin-left: auto;
-        margin-top: auto;
+        margin-top: 10px;
+        font-size: 13px;
     }
 
+    .blogs-section{
+        padding: 20px;
+        width: 90%;
+    }
 
 
 }
