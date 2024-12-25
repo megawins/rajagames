@@ -37,8 +37,10 @@
             </div>
 
             <div class="nav-button">
-                <button type="submit">EARN</button>
-                <button type="button"> LOGIN</button>
+                <a href="https://rajagames.in/#/login">
+                <button type="submit">REGISTER</button></a>
+                <a href="https://rajagames.in/#/login">
+                <button type="button"> LOGIN</button></a>
 
             </div>
 
@@ -62,7 +64,7 @@
 
 
         <section class="about" id="about">
-            <h2><span class="nameb"> RAJA GAMES </span>is one of the <span style="    background: linear-gradient(45deg, #00dfd4, #004bffd1);
+            <h2><span class="nameb"> <a href="https://rajagames.in/">RAJA GAMES</a> </span>is one of the <span style="    background: linear-gradient(45deg, #00dfd4, #004bffd1);
             border-radius: 50px;
             padding: 3px 29px;
             color: white;">TOP </span> <br> online earnings Platform in <span style="    background: linear-gradient(150deg, #00bf00, white, #ff8100);
@@ -96,14 +98,14 @@
             <div class="paginate">
                 <div class="carousel">
                     <div class="carousel-track">
-                        <img src="p2.jpg" alt="Image 1">
-                        <img src="poster 1.jpg" alt="Image 2">
-                        <img src="p2.jpg" alt="Image 3">
-                        <img src="poster 1.jpg" alt="Image 4">
+                        <img src="1.webp" alt="Image 1">
+                        <img src="1.webp" alt="Image 2">
+                        <img src="1.webp" alt="Image 3">
+                        <img src="1.webp" alt="Image 4">
                     </div>
                 </div>
-                <button class="carousel-button left">←</button>
-                <button class="carousel-button right">→</button>
+                <button class="carousel-button left"></button>
+                <button class="carousel-button right"></button>
             </div>
 
             <p class="paginatep" >Join RAJA GAMES Growing community</p>
@@ -265,13 +267,7 @@
 
                             </tr>
                         </table>
-                        <button type="button" style="     border: none;
-                border-radius: 15px;
-                padding: 25px 35px;
-                background: linear-gradient(45deg, #4bff00, #ffef00);
-                color: #000000;
-                font-weight: 900;
-                font-size: 20px;"> ENTER</button>
+                        <button type="button" class="enter"> ENTER</button>
                     </div>
                 </div>
             </div>
@@ -279,12 +275,17 @@
 
 
         <section class="statistics2" id="statistics2">
-            <h2>The Company's Popularity Over the Past <span class="years">11 Years</span></h2>
+            <h2>Our Popularity Over the Past <span class="years">11 Years</span></h2>
             <div class="chart-container">
+                
                 <canvas id="growthChart">d</canvas>
+        
             </div>
             <p >This report is based on
-                Google Trends</p>
+                <a href="https://trends.google.com/trends/explore?date=all&q=raja%20games&hl=en"  style="color: #0079bf;">Google Trends </a></p>
+                
+
+                
         </section>
 
 
@@ -760,7 +761,7 @@
             const ctx = document.getElementById('growthChart').getContext('2d');
 
             // Labels: Yearly progression
-            const labels = ['2004', '2006', '2008', '2010', '2012', '2014', '2016', '2018', '2020', '2022', '2024'];
+            const labels = ['2016','2017', '2018', '2019', '2020','2021', '2022', '2023', '2024'];
 
             // Simulated Google Trends Data
             const baseData = [5, 10, 18, 35, 55, 78, 50, 60, 40, 30, 90];
