@@ -1465,6 +1465,7 @@ th {
 }
 @media (max-width: 480px) {
 
+
     .carousel-track img{
         border-radius: 15px;
 
@@ -1502,13 +1503,14 @@ th {
     }
 
     .popup-text p, .popup-text ul li {
-        font-size: 10px; 
+        font-size: 12px; 
         margin: 0;
     }
     .popup-content{
         width: 90%;
         max-width: 90%;
         padding: 15px;
+        max-height: 90%;
     }
     .popup-content h3{
         font-size: 20px;
@@ -1546,7 +1548,7 @@ th {
 
     .social-icons{
         position: relative;
-        top: 30px;
+        top: 36px;
     }
 
     .blog-track{
@@ -1695,12 +1697,12 @@ th {
         text-align: center;
         line-height: 16px;
         position: relative;
-        bottom: 33px;
+        bottom: 30px;
     }
     
 
     .nav-button {
-        top: -11px;
+        top: -4px;
         position: relative;
         width: 55%;
     }
@@ -1708,7 +1710,7 @@ th {
     .nav-button button {
         background: none;
         color: white;
-        font-size: 7px;
+        font-size: 10px;
         padding: 6px 8px;
         border: 2px solid red;
         width: 40%;
