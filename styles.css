@@ -548,9 +548,10 @@ footer {
 }
 
 .affiliate-card img {
-    width: 46%;
-    margin-bottom: 15px;
-    border-radius: 20px;
+width: 66%;
+    margin-bottom: 1px;
+    border-radius: 5px;
+    margin-top: 8px;
 }
 
 .affiliate-card:hover {
