@@ -139,9 +139,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Elements and their target numbers
-    countUp(document.getElementById('downloads'), 900, 2000);
-    countUp(document.getElementById('happy-users'), 750, 2000);
-    countUp(document.getElementById('active-users'), 490, 2000);
+    countUp(document.getElementById('downloads'), 1581, 2000);
+    countUp(document.getElementById('happy-users'), 1240, 2000);
+    countUp(document.getElementById('active-users'), 980, 2000);
 });
 
 
