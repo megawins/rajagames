@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Blog Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar {
+            max-width: 800px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            font-size: 1em;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff4c4c;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #ff3333;
+        }
+
+        .main-blog {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-blog img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .main-blog h2 {
+            margin-top: 0;
+            color: #1e1e2f;
+        }
+
+        .main-blog p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #1e90ff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            background-color: #0073e6;
+        }
+
+        .blogs-list {
+            max-width: 1000px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: scale(1.05);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .blog-card h4 {
+            margin: 15px;
+            font-size: 1.3em;
+            color: #1e1e2f;
+        }
+
+        .blog-card p {
+            margin: 0 15px 15px;
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 700px;
+            width: 90%;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .popup-content h2 {
+            margin: 0 0 15px;
+            color: #1e1e2f;
+        }
+
+        .popup-content p {
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        .popup-close:hover {
+            background: #b52a3a;
+        }
+
+        @media (max-width: 480px) {
+
+            .blogs-list {
+                grid-template-columns: auto auto;
+                max-width: 95%;
+                gap: 8px;
+
+            }
+
+            .back-button {
+
+                width: 30px;
+                font-size: 12px;
+
+            }
+
+            .header{
+                font-size: 7px;
+                text-align: left;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Raja Games Blog</h1>
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search blogs by keywords or titles...">
+        <button onclick="searchBlogs()">Search</button>
+    </div>
+
+    <div class="main-blog" id="main-blog">
+        <img src="1.webp" alt="Blog Image">
+        <h2 id="main-title">Main Blog Title</h2>
+        <p id="main-content">This is the main blog content teaser. Click read more to view the full article.</p>
+        <button class="read-more"
+            onclick="showPopup('Main Blog Title', 'This is the full content of the main blog. Here you will find all the details about the topic.')">Read
+            More</button>
+    </div>
+
+    <div class="blogs-list" id="blogs-list">
+        <div class="blog-card" onclick="updateMainBlog('Blog Title 1', 'This is the content of Blog 1.', 'blog2.jpg')">
+            <img src="1.webp" alt="Blog 1">
+            <h4>Blog Title 1</h4>
+            <p>Short description of Blog 1...</p>
+        </div>
+
+        <div class="blog-card" onclick="updateMainBlog('Blog Title 2', 'This is the content of Blog 2.', 'blog3.jpg')">
+            <img src="1.webp" alt="Blog 2">
+            <h4>Blog Title 2</h4>
+            <p>Short description of Blog 2...</p>
+        </div>
+
+        <div class="blog-card" onclick="updateMainBlog('Blog Title 3', 'This is the content of Blog 3.', 'blog4.jpg')">
+            <img src="1.webp" alt="Blog 3">
+            <h4>Blog Title 3</h4>
+            <p>Short description of Blog 3...</p>
+        </div>
+        <div class="blog-card" onclick="updateMainBlog('Blog Title 1', 'This is the content of Blog 1.', 'blog2.jpg')">
+            <img src="1.webp" alt="Blog 1">
+            <h4>Blog Title 1</h4>
+            <p>Short description of Blog 1...</p>
+        </div>
+
+        <div class="blog-card" onclick="updateMainBlog('Blog Title 2', 'This is the content of Blog 2.', 'blog3.jpg')">
+            <img src="1.webp" alt="Blog 2">
+            <h4>Blog Title 2</h4>
+            <p>Short description of Blog 2...</p>
+        </div>
+
+        <div class="blog-card" onclick="updateMainBlog('Blog Title 3', 'This is the content of Blog 3.', 'blog4.jpg')">
+            <img src="1.webp" alt="Blog 3">
+            <h4>Blog Title 3</h4>
+            <p>Short description of Blog 3...</p>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <h2 id="popup-title">Popup Title</h2>
+            <p id="popup-text">Popup content goes here...</p>
+        </div>
+    </div>
+
+    <script>
+        function updateMainBlog(title, content, image) {
+            document.getElementById('main-title').innerText = title;
+            document.getElementById('main-content').innerText = content;
+            document.getElementById('main-blog').querySelector('img').src = image;
+        }
+
+        function showPopup(title, content) {
+            document.getElementById('popup-title').innerText = title;
+            document.getElementById('popup-text').innerText = content;
+            document.getElementById('popup-overlay').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-overlay').style.display = 'none';
+        }
+
+        function searchBlogs() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const blogs = document.querySelectorAll('.blog-card');
+
+            blogs.forEach(blog => {
+                const title = blog.querySelector('h4').innerText.toLowerCase();
+                if (title.includes(query)) {
+                    blog.style.display = 'block';
+                } else {
+                    blog.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
