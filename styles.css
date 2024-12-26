@@ -548,10 +548,11 @@ footer {
 }
 
 .affiliate-card img {
-width: 66%;
+    width: 66%;
     margin-bottom: 1px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 8px;
+    filter: drop-shadow(-2px 4px 4px rgb(1, 5, 59));
 }
 
 .affiliate-card:hover {
