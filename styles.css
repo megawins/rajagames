@@ -1908,6 +1908,7 @@ th {
     .statistics2{
         margin-top: 15px;
         margin-bottom: 10px;
+        background:radial-gradient(circle at 82% -70%, #ff0000 171px, #1d1c1c 435px);
     }
 
     .statistics2 h2 {
