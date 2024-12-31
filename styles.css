@@ -1804,13 +1804,17 @@ th {
 
     .about h2 {
         font-size: 25px;
-        line-height: 30px;
+        line-height: 37px;
         margin-bottom: 0px;
+        background: #f4f4f4;
+        padding: 11px;
+        border-radius: 15px;
+    }
     }
 
     .nameb a {
         color: #b6b6b6;
-        font-size: 45px;
+        font-size: 42px;
         font-weight: 900;
         line-height: 75%;
         text-decoration: none;
